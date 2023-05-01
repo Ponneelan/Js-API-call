@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    height: 100vh;
+    width: auto;
+}
+.left{
+    border-right: 1px solid black;
+}
+
+.weather-content{
+    border: 1px solid gray;
+    box-shadow: 3px 5px 10px 0px grey;
+    width: fit-content;
+    width: 401px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.weather-box h2{
+    font-size: 45px;
+} 
+.weather-box h2::after{
+    content: "\2103";
+    font-size: 12px;
+}
+
+.img-box img{
+    height: 150px;
+}
+#error{
+    color:red;
+}

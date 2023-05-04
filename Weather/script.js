@@ -9,7 +9,7 @@ btn.addEventListener('click',getWeather)
 
 function getWeather(){
     let city = document.getElementById('input-box').value;
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}`).then(res=>res.json()).then(data =>{
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}`).then(res=>res.json()).then(data =>{
         console.log(data);
         if(data['cod'] == '200'){
             let html = `<div class="col-12 d-flex  weather-content">

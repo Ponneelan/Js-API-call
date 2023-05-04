@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+
+    <form action="" id="cus-form">
+        <input type="text" name="title" placeholder="Title" id="title">
+        <input type="text" name="body" placeholder="Body" id="body">
+        <input type="text" name="userid" placeholder="user Id" id="userid">
+        <input type="button" value="Create User" id="btn" >
+    </form>
+
+    <script>
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener("click", createUser);
+
+        function createUser() {
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: document.getElementById("title").value,
+                    body: document.getElementById("body").value,
+                    userId: document.getElementById("userid").value,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .then((response) => response.json())
+                .catch(e=>{console.log(e)})
+                .then((json) => console.log(json))
+                .catch(e=>{console.log(e)});
+        }
+    </script>
+</body>
+
+</html>

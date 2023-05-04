@@ -4,7 +4,7 @@ var mapOptions = {
  }
  var map = new L.map('mapid', mapOptions);
 
-let at = 'pk.eyJ1IjoicG9ubmVlbGFuIiwiYSI6ImNsaDdoZTkzMzBnNm4zcW5za3FrZDM2eTQifQ.jXGUIbCywbLynh8A6GOZCw';
+let at = 'Your API Key';
 
 var layer = new L.TileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${at}`, {
     maxZoom: 18,

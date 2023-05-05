@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Contributions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-calendar/dist/github-calendar.css" />
+    <style>
+        .contrib-column{
+            display: none;
+        }
+        .float-left{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="contributions-chart"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/github-calendar/dist/github-calendar.min.js"></script>
+    <script>
+        GitHubCalendar("#contributions-chart", "ponneelan", {
+            responsive: true
+        });
+    </script>
+</body>
+</html>

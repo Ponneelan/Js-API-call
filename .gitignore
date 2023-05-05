@@ -1,0 +1,4 @@
+!*.js
+!*.html
+!*.css
+package-lock.json
